@@ -1,36 +1,217 @@
-.bio {
-    display:flex;
+/* ===========================
+   GLOBAL
+   =========================== */
+body {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    padding: 2.5rem;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #0D1117;
+    color: #C9D1D9;
 }
 
-.bio img{
-    width: 450px;
+/* ===========================
+   BIO
+   =========================== */
+.bio {
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+    gap: 1rem;
+    padding: 2.5rem;
+    margin: 2rem;
+    background-color: #161B22;
+    border-radius: 2%;
+}
+
+.bio img {
+    width: 370px;
     border-radius: 10%;
     object-fit: cover;
 }
 
 .texto {
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: left;
-    padding: 0;
     width: 100%;
 }
 
 .texto p {
     margin: 0;
-    padding: 0;
-    font-size: 1.4rem;
+    padding: 1rem;
+    font-size: 1.1rem;
     line-height: 1.4;
-    width: 100%;
-    text-indent: 0;
     text-align: justify;
 }
 
 .texto h1 {
     text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Press Start 2P', cursive;
 }
 
+/* ===========================
+   HARDSKILLS / TECNOLOGIAS
+   =========================== */
+.hardskills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    width: 100%;
+}
+
+.hardskills h2 {
+    font-size: 1.2rem;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.tech {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #161B22;
+    border-radius: 7%;
+    width: 150px;
+    height: 75px;
+}
+
+.card p {
+    margin: 0;
+}
+
+.tech img {
+    width: 40px;
+    object-fit: cover;
+}
+
+/* ===========================
+   PROJETOS
+   =========================== */
+.projetos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+}
+
+.projetos h2 {
+    font-size: 1.2rem;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.projeto-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.card-projeto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #161B22;
+    border-radius: 5%;
+    padding: 2rem;
+}
+
+.card-projeto li {
+    text-align: justify;
+}
+
+.card-projeto a {
+    background-color: #0D1117;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 5%;
+}
+
+.card-projeto a:hover {
+    background-color: #222a35;
+}
+
+.projetos img {
+    width: 100%;
+    max-width: 420px;
+    aspect-ratio: 16/9;
+    border-radius: 5%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+/* ===========================
+   CONTATO
+   =========================== */
+.contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contato h2 {
+    font-size: 1.2rem;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.box-contatos {
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+
+.box-contatos a {
+    background-color: #161B22;
+    padding: 0.5rem;
+    border-radius: 10%;
+}
+
+.box-contatos a:hover {
+    background-color: #222a35;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===========================
+   RESPONSIVO 768px
+   =========================== */
+@media (max-width: 768px) {
+    .bio, .projetos { padding: 1rem; margin: 1rem; }
+    .texto p { padding: 0.5rem; }
+    .bio { flex-direction: column; max-width: 90%; }
+    .bio img { width: 100%; max-width: 300px; margin-bottom: 1.5rem; }
+    .texto { width: 100%; align-items: center; }
+    .projeto-box { grid-template-columns: 1fr; gap: 2rem; }
+    .tech { flex-wrap: wrap; justify-content: center; max-width: 90%; gap: 1rem; }
+    .box-contatos { gap: 1rem; }
+}
+
+/* ===========================
+   RESPONSIVO 500px
+   =========================== */
+@media (max-width: 500px) {
+    .bio, .projetos, .contato { padding: 0.5rem; margin: 0.5rem; }
+    .texto h1, .hardskills h2, .projetos h2, .contato h2 { font-size: 1rem; }
+    .texto p { font-size: 1rem; }
+    .tech { gap: 0.5rem; max-width: 95%; }
+    .card { width: 100px; height: 60px; transform: scale(0.8); }
+    .projeto-box { padding: 0; gap: 1.5rem; }
+    .card-projeto { padding: 1rem; }
+}
