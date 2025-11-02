@@ -13,9 +13,6 @@ O projeto pode ser visualizado localmente abrindo o arquivo `index.html` no nave
 
 [Visualizar online](https://maghaivergomesramos.github.io/Portfolio-Pessoal)
 
-Captura de tela:
-
-![Captura do Portfólio](assets/images/image.png)
 
 ---
 
