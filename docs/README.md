@@ -10,12 +10,12 @@ Este é meu **portfólio pessoal**, desenvolvido utilizando **HTML e CSS puro**,
 
 O projeto pode ser visualizado localmente abrindo o arquivo `index.html` no navegador.
 
-Se estiver hospedado, você pode adicionar aqui o link direto (por exemplo, GitHub Pages ou Vercel):
-**Exemplo:** [Visualizar online](#)
+
+[Visualizar online](https://maghaivergomesramos.github.io/Portfolio-Pessoal)
 
 Captura de tela:
 
-![Captura do Portfólio](assets/images/fotoPerfil.jpg)
+![Captura do Portfólio](assets/images/image.png)
 
 ---
 
